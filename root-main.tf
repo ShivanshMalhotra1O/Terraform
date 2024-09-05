@@ -1,4 +1,4 @@
-#EC2 Module
+# EC2 Module
 module "EC2" {
   source        = "./EC2-Instance"
   ami           = "" 
@@ -9,3 +9,20 @@ module "EC2" {
   vpc_id        = ""
   sg_id         = "" 
 }
+
+# Security Groups
+module "SecurityGroups"{
+  source = "./Security-Groups"
+  name = ""
+}
+
+# VPC
+module "VPC" {
+  source = "./Vpc"
+  vpc_config = ""
+  subnet_config = ""
+  internet_gateway_config = ""
+  public_rt_config = ""
+  private_rt_config = ""
+}
+
