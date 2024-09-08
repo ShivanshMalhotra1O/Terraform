@@ -26,3 +26,25 @@ module "VPC" {
   private_rt_config = ""
 }
 
+# RDS
+module "RDS" {
+  source = "./RDS-Instance"
+  engine_type = ""
+  engine_version = ""
+  instance_class = ""
+  storage_type = ""
+  allocated_storage = ""
+  identifier = ""
+  username = ""
+  password = ""
+  publicly_accessible = ""
+  db_name = ""
+}
+
+# S3
+module "S3" {
+  source = "./S3-Bucket"
+  bucket_name = ""
+  environment = ""
+  bucket_versioning = "" // bool value : true or false
+  }
